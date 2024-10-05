@@ -50,27 +50,3 @@
 **output variable (desired target):**
 
     21 - y - has the client subscribed a term deposit? (binary: 'yes','no')
-
-
-Workflow:
-
-    - Start with bank-additional.csv for EDA:
-    Conduct a quick exploratory data analysis to understand feature distributions, relationships, and preliminary model testing.
-    Use this dataset for computationally expensive models (e.g., SVM), where running on the full dataset might be too slow.
-    - Progress to bank-additional-full.csv for Full Analysis:
-    Perform the complete data preprocessing, feature engineering, and model training using this full dataset.
-    Evaluate model performance, fine-tune hyperparameters, and make predictions using this comprehensive dataset.
-    - Use bank-full.csv to Compare Feature Impact:
-    Run the same models you’ve developed on bank-additional-full.csv and see how the exclusion of three features (from 20 to 17) affects performance.
-    Analyze the importance of the new features added in bank-additional-full.csv.
-    - Use bank.csv for Quick Prototyping:
-    Test simple preprocessing, exploratory techniques, or basic models for quick prototyping.
-    Use it as a quick-check dataset to save time in the early development stages.
-
-Summary:
-
-    - bank-additional-full.csv: Main dataset for building and fine-tuning models.
-    - bank-additional.csv: Smaller subset for testing computationally expensive algorithms and model prototyping.
-    - bank-full.csv: Older dataset to compare performance and evaluate the impact of additional features.
-    - bank.csv: Small version of the older dataset for initial experimentation and faster iteration.
-
